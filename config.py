@@ -1,0 +1,10 @@
+import os
+
+CONSUMER_KEY = os.getenv('CONSUMER_KEY')
+CONSUMER_SECRET = os.getenv('CONSUMER_SECRET')
+ACCESS_TOKEN = os.getenv('ACCESS_TOKEN')
+ACCESS_TOKEN_SECRET = os.getenv('ACCESS_TOKEN_SECRET')
+USERNAME = os.getenv('USERNAME')
+
+NOTION_TOKEN = os.getenv('NOTION_TOKEN')
+TWEET_DB = os.getenv('TWEET_DB')
