@@ -4,7 +4,8 @@ from util import log_error
 from notion import create_data
 
 if not CONSUMER_KEY:
-    print('error')
+    log_error("Can't find Environment Variable CONSUMER_KEY!")
+    print("Can't find Environment Variable CONSUMER_KEY!")
     exit(0)
 
 auth = OAuth1UserHandler(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
@@ -40,6 +41,7 @@ def fetch_tweets():
 
 
 def tweets_to_notion():
+    print("Tweets to Notion Call...")
     tweets = fetch_tweets()
     if tweets:
         result = create_data(tweets)

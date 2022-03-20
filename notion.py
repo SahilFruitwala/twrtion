@@ -15,7 +15,9 @@ headers = {
 
 def add_data_to_notion(data):
     response = request(method='POST', url=PAGE_URI, headers=headers, json=data)
+    print("Notion Call : ", response.status_code, " : ", str(datetime.now()))
     if response.status_code != 200:
+        print("Notion ERROR : ", str(response.json()['message']), " : ", str(datetime.now()))
         log_error(response.json()['message'])
         return False
     return True
