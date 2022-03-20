@@ -8,6 +8,7 @@ def start_fetching():
     tweets_to_notion()
 
 
+print("It started")
 tweets_to_notion()
 scheduler = BlockingScheduler()
 scheduler.add_job(start_fetching, 'interval', hours=3)
